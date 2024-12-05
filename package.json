@@ -4,8 +4,9 @@
   "version": "1.1.0",
   "author": "Timur Shemsedinov <timur.shemsedinov@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
-    "test": "eslint ./Exercises; hpw",
+    "test": "eslint ./Exercises/*.js && hpw",
     "ci": "eslint ./Exercises && hpw"
   },
   "dependencies": {

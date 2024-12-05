@@ -1,6 +1,6 @@
 ({
   name: 'random',
-  length: [120, 150],
+  length: [120, 150], 
   test: random => {
     const x = random(0, 10);
     if (typeof x !== 'number') throw new Error('Expected number result');
@@ -13,5 +13,10 @@
 
     const z = random(10, 10);
     if (z !== 10) throw new Error('Expected 10');
+  
+    const d = random(10);
+    if (isNaN(d) || d < 0 || d > 10) {
+      throw new Error('Expected random number from 0 to 10 inclusive');
+    }
   }
 })
